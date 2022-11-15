@@ -20,7 +20,8 @@ public class SaveToSvg {
         fileChooser.setTitle("Save As");
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         fileChooser.getExtensionFilters().clear();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("SVG", "*.svg"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("SVG (*.svg)", "*.svg"));
+        fileChooser.setInitialFileName("Namnlös");
         filePath = fileChooser.showSaveDialog(stage).toPath();
 
         toSvg(model, strings);
