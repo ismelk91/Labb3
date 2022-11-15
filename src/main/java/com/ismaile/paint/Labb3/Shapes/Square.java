@@ -16,11 +16,21 @@ public class Square extends Shape {
 
     @Override
     public boolean isSelected(double pointX, double pointY) {
-         return pointX >= getPointX() &&
+        return pointX >= getPointX() &&
                 pointX <= getPointX() + getSize() &&
                 pointY >= getPointY() &&
                 pointY <= getPointY() + getSize();
     }
 
+    @Override
+    public String drawSvg() {
+        String color = "#" + getColor().toString().substring(2, 10);
+
+        return "<rect x =\"" + getPointX() + "\"" +
+                " y=\"" + getPointY() + "\"" +
+                " width=\"" + (getSize() * 2) + "\"" +
+                " height=\"" + (getSize() * 2) + "\"" +
+                " fill=\"" + color + "\"" + " />";
+    }
 
 }

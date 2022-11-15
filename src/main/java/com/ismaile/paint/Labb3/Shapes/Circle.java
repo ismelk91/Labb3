@@ -23,6 +23,15 @@ public class Circle extends Shape {
         return distance <= getSize();
     }
 
+    @Override
+    public String drawSvg() {
+        String color = "#" + getColor().toString().substring(2, 10);
+
+        return "<circle cx=\"" + getPointX() + "\"" +
+                " cy=\"" + getPointY() + "\"" +
+                " r=\"" + getSize() + "\"" +
+                " fill=\"" + color + "\"" + " />";
+    }
 
 }
 

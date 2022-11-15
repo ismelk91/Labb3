@@ -46,6 +46,8 @@ public abstract class Shape {
 
     public abstract boolean isSelected(double pointX, double pointY);
 
+    public abstract String drawSvg();
+
     public static Shape createShape(ShapeType type, double pointX, double pointY, double size, Color color) {
         return switch (type) {
             case CIRCLE -> new Circle(pointX, pointY, size, color);
@@ -75,8 +77,6 @@ public abstract class Shape {
                 ", color=" + color +
                 '}';
     }
-
-
 
 }
 

@@ -4,8 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ismaile.paint.Labb3.PaintController">
-      <MenuBar prefHeight="26.0" prefWidth="800.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ismaile.paint.Labb3.PaintController">
+      <MenuBar prefHeight="26.0" prefWidth="1024.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -15,12 +15,12 @@
           </Menu>
         </menus>
       </MenuBar>
-   <HBox alignment="TOP_CENTER" layoutY="26.0" prefHeight="26.0" prefWidth="800.0" spacing="15.0" style="-fx-background-color: lightgray;">
+   <HBox alignment="TOP_CENTER" layoutY="26.0" prefHeight="26.0" prefWidth="1024.0" spacing="15.0" style="-fx-background-color: lightgray;">
                <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="92.0" />
       <Button fx:id="undoButton" mnemonicParsing="false" onAction="#undoButtonClicked" text="Undo" />
       <Button fx:id="redoButton" mnemonicParsing="false" onAction="#redoButtonClicked" text="Redo" />
                <ColorPicker fx:id="colorPicker" prefHeight="25.0" prefWidth="92.0" />
                <Slider fx:id="slider" prefHeight="25.0" prefWidth="92.0" />
    </HBox>
-      <Canvas fx:id="canvas" height="548.0" layoutY="52.0" onMouseClicked="#canvasClicked" width="800.0" />
+      <Canvas fx:id="canvas" height="668.0" layoutY="52.0" onMouseClicked="#canvasClicked" width="1024.0" />
 </AnchorPane>

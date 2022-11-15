@@ -10,10 +10,8 @@ import javafx.collections.ObservableList;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-import java.io.File;
 import java.util.ArrayDeque;
 import java.util.Deque;
-
 
 public class PaintModel {
     private final DoubleProperty size;
@@ -48,10 +46,6 @@ public class PaintModel {
 
     public ShapeType getShapeTypeObjectProperty() {
         return shapeTypeObjectProperty.get();
-    }
-
-    public ObservableList<ShapeType> getShapeTypesList() {
-        return shapeTypesList;
     }
 
     public DoubleProperty sizeProperty() {
@@ -96,7 +90,7 @@ public class PaintModel {
     private void addToRedoStack(Shape newShape) {
         Command redo = () -> shapes.add(newShape);
         redoStack.push(redo);
-   }
+    }
 
     private void addToUndoStack(Shape newShape) {
         Command undo = () -> shapes.remove(newShape);
@@ -113,9 +107,6 @@ public class PaintModel {
         undoToExecute.execute();
     }
 
-    public void saveToSvg(File selectedFile) {
-
-    }
 }
 
 @FunctionalInterface
